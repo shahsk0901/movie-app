@@ -1,4 +1,1 @@
-<?php 
-	header("Location: movie.html");
-	exit();
-?>
+<?php include 'movie.html'; ?>

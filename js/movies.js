@@ -2,20 +2,18 @@ function initialize () {
   //alert("initialize");
 }
 
-function sendRequest () {
-  //alert("request initialize");
-   var xhr = new XMLHttpRequest();
-   var query = encodeURI(document.getElementById("form-input").value);
-   xhr.open("GET", "resources/proxy.php?method=/3/search/movie&query=" + query);
-   xhr.setRequestHeader("Accept","application/json");
-   xhr.onreadystatechange = function () {
-       if (this.readyState == 4) {
-         //alert("readyState");
-          var json = JSON.parse(this.responseText);
-          var str = JSON.stringify(json,undefined,2);
-          alert(str);
-          document.getElementById("output").innerHTML = "<pre>" + str + "</pre>";
-       }
-   };
-   xhr.send(null);
+function initiateRequest () {
+  var json_all;
+  var query = encodeURI(document.getElementById("form-input").value);
+
+  // Callback function to retrieve the pageCount from AJAX Request
+  // http://recurial.com/programming/understanding-callback-functions-in-javascript/
+  getPageCount(query,function(pageCount) {
+     for(i=1;i<=pageCount;i++) {
+       alert(i);
+     }
+   });
+   /*var str = JSON.stringify(json_all,undefined,2);
+   alert(str);
+   document.getElementById("output").innerHTML = "<pre>" + str + "</pre>";*/
 }

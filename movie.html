@@ -3,12 +3,14 @@
   <head>
     <title>Display Movie Information</title>
     <meta charset="utf-8"/>
+    <script type="text/javascript" src="js/sendRequest.js"></script>
+    <script type="text/javascript" src="js/getPageCount.js"></script>
     <script type="text/javascript" src="js/movies.js"></script>
   </head>
   <body onload="initialize();">
     <form>
        <label>Movie title: <input type="text" id="form-input"/></label>
-       <input type="button" onclick="sendRequest();" value="Display Info"/>
+       <input type="button" onclick="initiateRequest();" value="Display Info"/>
     </form>
     <div id="output">&nbsp;</div>
   </body>

@@ -3,15 +3,29 @@
   <head>
     <title>Display Movie Information</title>
     <meta charset="utf-8"/>
+    <meta name="viewport" context="width=device-width, intitial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body onload="initialize();">
+    <div class="main-container">
+      <div class="head">
+        <form>
+           <label>Movie title: <input type="text" id="form-input"/></label>
+           <input type="button" onclick="initiateRequest();" value="Display Info"/>
+        </form>
+      </div>
+
+      <div class="content">
+          <div class="left"></div>
+          <div class="right"></div>
+      </div>
+      <div id="output">&nbsp;</div>
+    </div>
+
+    <script type="text/javascript" src="js/checkResponse.js"></script>
     <script type="text/javascript" src="js/sendRequest.js"></script>
     <script type="text/javascript" src="js/getPageCount.js"></script>
     <script type="text/javascript" src="js/movies.js"></script>
-  </head>
-  <body onload="initialize();">
-    <form>
-       <label>Movie title: <input type="text" id="form-input"/></label>
-       <input type="button" onclick="initiateRequest();" value="Display Info"/>
-    </form>
-    <div id="output">&nbsp;</div>
   </body>
 </html>

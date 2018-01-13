@@ -4,6 +4,7 @@ var pages = null;
 
 function initiateRequest () {
   var query = encodeURI(document.getElementById("form-input").value);
+  alert(query);
   // Callback function to retrieve the pageCount from AJAX Request
   // http://recurial.com/programming/understanding-callback-functions-in-javascript/
   //https://www.webmasterworld.com/javascript/3952568.htm

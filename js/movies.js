@@ -10,12 +10,12 @@ function initiateRequest () {
   //https://www.webmasterworld.com/javascript/3952568.htm
   getPageCount(query,function(page) {
     alert("getPageCount: " + page);
-    pages = page;
+    //pages = page;
     for(i=1;i<=page;i++) {
-      sendRequest(query,i);
+      sendRequest(query,i,inflateSearchResults);
     }
 
-    check = setInterval(checkResponse,500);
+    //check = setInterval(checkResponse,500);
    });
    /*var str = JSON.stringify(json_all,undefined,2);
    alert(str);

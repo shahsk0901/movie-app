@@ -1,0 +1,7 @@
+/* To hide the scrollbar, width larger than parent, with parent's overflow hidden and a border is necesary*/
+#left div {
+  width: 100%;
+  height: 100%;
+  padding-right: 4%;
+  overflow-y:scroll;
+}

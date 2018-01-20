@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/movie-list.css" />
   </head><body onload="initialize();">
     <div class="main-container">
 
       <div class="head">
         <form id="search-form">
-              <input type="text" id="form-input"/><!--- Remove the white space and the line breaks to remove magical gaps between elements
-                https://stackoverflow.com/questions/19038799/why-is-there-an-unexplainable-gap-between-these-inline-block-div-elements
-              --><input type="button" onclick="initiateRequest();" value="Display Info"/>
+          <input type="text" id="form-input"/><!---
+          --><input type="button" onclick="initiateRequest();" value="Display Info"/>
         </form>
       </div>
 
       <div class="content">
         <div id="left">
+          <div>
+            <ul id="u"></ul>
+          </div>
         </div>
         <div id="right">
         </div>
